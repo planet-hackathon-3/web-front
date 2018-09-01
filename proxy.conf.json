@@ -1,0 +1,23 @@
+{
+  "/api/img": {
+    "target": "https://hago.herokuapp.com/cats/",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
+
+{
+  "/api/tips": {
+    "target": "https://hago.herokuapp.com/cats/",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

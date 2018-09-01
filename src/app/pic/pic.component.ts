@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { Observable } from 'rxjs/Observable';
 
 
 @Component({
@@ -8,15 +9,25 @@ import { DataService } from '../data.service';
   styleUrls: ['./pic.component.css']
 })
 export class PicComponent implements OnInit {
-  public imgArr;
+  public imgJson;
   public imgUrls;
 
   constructor(private dataService: DataService ) {
-    this.imgArr = JSON.parse(this.dataService.getImgList().subscribe());
-    this.imgUrls = this.imgArr.map(a => a.url);
+    this.imgJson = this.dataService.getImgList().subscribe();
+
    }
+  //  this.imgUrls = [
+  //   '../../assets/test01.jpg',
+  //   '../../assets/test02.jpg',
+  //   '../../assets/test03.jpg',
+  //   '../../assets/test04.jpg',
+  //   '../../assets/test05.jpg',
+  //   '../../assets/test06.jpg',
+  //   '../../assets/test07.jpg',
+  //   '../../assets/test08.jpg'
+  // ];
 
   ngOnInit() {
-
+    //this.imgUrls = JSON.parse(this.imgJson).map(a => a.url);
   }
 }

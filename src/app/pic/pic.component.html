@@ -1,9 +1,10 @@
-<slideshow [height]="'1000px'"
+<slideshow
+           [height]="'1000px'"
            [minHeight]="'525px'"
            [autoPlay]="true"
            [autoPlayInterval]="5000"
            [showArrows]="false"
-           [imageUrls]="imgUrls"
+           [imageUrls]= "imgUrls"
            [lazyLoad]="imgUrls?.length > 1"
            [autoPlayWaitForLazyLoad]="true">
 </slideshow>
