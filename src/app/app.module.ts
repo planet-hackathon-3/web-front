@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { PicComponent } from './pic/pic.component';
+import { TipbarComponent } from './tipbar/tipbar.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PicComponent,
+    TipbarComponent
   ],
   imports: [
     BrowserModule
