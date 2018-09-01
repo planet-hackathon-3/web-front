@@ -1,19 +1,20 @@
 
 
-<div id="time-wrapper">
+<div id="time-wrapper" ng-con>
   <div id="time">
-    {{ now.getHours()}} : {{ now.getMinutes() }}
+      {{now | date:'HH:mm'}}
+
   </div>
 </div>
 
 <div id="tips-wrapper">
   <h2>TIPS</h2>
-  <p> {{ tip[tipIdx].content }}
+  <p> {{ tipsJson }}
   </p>
 </div>
 
 <div id="like-wrapper">
   <div id="like">
-    ❤️ 1,232 likes
+    ❤️ {{ likeJson[0] }} likes
   </div>
 </div>

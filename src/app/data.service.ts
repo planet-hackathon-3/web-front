@@ -9,12 +9,12 @@ export class DataService {
   constructor(private http: HttpClient) {
     this.getImgList();
     this.getTipsList();
+
   }
 
     getImgList() {
       return this.http.get('https://hago.herokuapp.com/cats/')
                       .pipe(map((res: any) => {
-                        console.log('res', res);
                         return res;
                       })
                     );
@@ -23,7 +23,6 @@ export class DataService {
     getTipsList() {
       return this.http.get('https://hago.herokuapp.com/cats/tip/random')
         .pipe(map((res: any) => {
-          console.log('res', res);
           return res;
         }));
     }

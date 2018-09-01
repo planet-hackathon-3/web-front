@@ -10,24 +10,16 @@ import { Observable } from 'rxjs/Observable';
 })
 export class PicComponent implements OnInit {
   public imgJson;
-  public imgUrls;
+  public imgUrls = [''];
 
   constructor(private dataService: DataService ) {
-    this.imgJson = this.dataService.getImgList().subscribe();
+    this.imgJson = this.dataService.getImgList().subscribe((items) => {
+      this.imgUrls = items.map(item => item['url']);
+    });
 
    }
-  //  this.imgUrls = [
-  //   '../../assets/test01.jpg',
-  //   '../../assets/test02.jpg',
-  //   '../../assets/test03.jpg',
-  //   '../../assets/test04.jpg',
-  //   '../../assets/test05.jpg',
-  //   '../../assets/test06.jpg',
-  //   '../../assets/test07.jpg',
-  //   '../../assets/test08.jpg'
-  // ];
 
   ngOnInit() {
-    //this.imgUrls = JSON.parse(this.imgJson).map(a => a.url);
+
   }
 }
