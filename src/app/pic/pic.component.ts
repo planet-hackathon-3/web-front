@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnChanges, OnInit} from '@angular/core';
 import { DataService } from '../data.service';
 import { Observable } from 'rxjs/Observable';
 
@@ -10,11 +10,13 @@ import { Observable } from 'rxjs/Observable';
 })
 export class PicComponent implements OnInit {
   public imgJson;
-  public imgUrls;
+  public imgUrls = [''];
 
   constructor(private dataService: DataService ) {
-    this.imgJson = this.dataService.getImgList().subscribe();
-
+    this.dataService.getImgList().subscribe((items) => {
+      this.imgUrls = items.map(item => item['url']);
+      console.log(this.imgUrls);
+    });
    }
   //  this.imgUrls = [
   //   '../../assets/test01.jpg',

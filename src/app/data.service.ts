@@ -14,7 +14,7 @@ export class DataService {
     getImgList() {
       return this.http.get('https://hago.herokuapp.com/cats/')
                       .pipe(map((res: any) => {
-                        console.log('res', res);
+                        // console.log('res', res);
                         return res;
                       })
                     );
@@ -23,7 +23,7 @@ export class DataService {
     getTipsList() {
       return this.http.get('https://hago.herokuapp.com/cats/tip/random')
         .pipe(map((res: any) => {
-          console.log('res', res);
+          // console.log('res', res);
           return res;
         }));
     }
