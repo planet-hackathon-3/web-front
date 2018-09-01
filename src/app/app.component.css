@@ -5,5 +5,10 @@ app-pic {
 
 app-tipbar {
   width: 25%;
+  height: 100%;
   float: left;
+  background-color: black;
+  color: white;
+  font-family: 'Nanum Square';
 }
+

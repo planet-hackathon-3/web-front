@@ -5,6 +5,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { PicComponent } from './pic/pic.component';
 import { TipbarComponent } from './tipbar/tipbar.component';
+import {SlideshowModule} from 'ng-simple-slideshow';
+import { DataService } from './data.service';
 
 
 @NgModule({
@@ -14,9 +16,10 @@ import { TipbarComponent } from './tipbar/tipbar.component';
     TipbarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SlideshowModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

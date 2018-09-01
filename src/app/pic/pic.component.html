@@ -1,3 +1,9 @@
-<p>
-  pic works!
-</p>
+<slideshow [height]="'1000px'"
+           [minHeight]="'525px'"
+           [autoPlay]="true"
+           [autoPlayInterval]="5000"
+           [showArrows]="false"
+           [imageUrls]="imgUrl"
+           [lazyLoad]="imgUrl?.length > 1"
+           [autoPlayWaitForLazyLoad]="true">
+</slideshow>
