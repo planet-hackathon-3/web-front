@@ -7,6 +7,7 @@ import { PicComponent } from './pic/pic.component';
 import { TipbarComponent } from './tipbar/tipbar.component';
 import {SlideshowModule} from 'ng-simple-slideshow';
 import { DataService } from './data.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { DataService } from './data.service';
   ],
   imports: [
     BrowserModule,
-    SlideshowModule
+    SlideshowModule,
+    HttpClientModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
